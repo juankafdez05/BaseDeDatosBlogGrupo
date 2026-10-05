@@ -1,0 +1,80 @@
+site_name: ABD Lab
+site_description: >-
+  Blog de Base de Datos de Rube, Alfredo y Juan Carlos.
+  2.º ASIR del IES Gonzalo Nazareno. Curso 2026/27.
+site_author: Rube, Alfredo y Juan Carlos
+
+site_url: https://juankafdez05.github.io/BaseDeDatosBlogGrupo/
+repo_url: https://github.com/juankafdez05/BaseDeDatosBlogGrupo
+repo_name: BaseDeDatosBlogGrupo
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+copyright: Rube · Alfredo · Juan Carlos — IES Gonzalo Nazareno
+
+theme:
+  name: material
+  language: es
+  font: false
+
+  icon:
+    logo: material/database
+    repo: fontawesome/brands/github
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      guess_lang: false
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+hooks:
+  - hooks/navigation.py
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  generator: false
